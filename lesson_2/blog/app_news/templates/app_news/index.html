@@ -1,0 +1,11 @@
+{% extends 'app_news/base.html' %}
+
+{% block news %}
+<ul>
+    {% for category in news_categories %}
+        <li>{{category}}</li>
+    {% empty %}
+       <h3>No categories</h3>
+    {% endfor %}
+</ul>
+{% endblock %}
