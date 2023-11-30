@@ -4,14 +4,8 @@
 
 <div>
     <ul>
-        {% for product in products %}
-           <li>
-               <h3>{{product.name}}</h3>
-               <p>{{product.description}}</p>
-               <button>{{product.price}} Руб.</button>
-           </li>
-        {% empty %}
-        <h3>Продуктов пока нет</h3>
+        {% for category in categories %}
+            <li><a href="{% url 'category' category.id %}" >{{category.name}}</a></li>
         {% endfor %}
     </ul>
 </div>
